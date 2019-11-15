@@ -31,7 +31,7 @@ git clone https://github.com/ajaytech/MicroserviceNodeSpringAppRoute.git
  
 * Step 6: Create a Role Collection With Role Template Defined in xs-security.json
  
-* Step 7: Assign Role Collection to Your Userid
+* Step 7: Assign Role Collection to Your Userid(in Trust Config of SCF)
  
 * Step 8: Deploy App to SAP® Cloud Foundry. 
   Go inside folder where manifest.yml file is present and run:

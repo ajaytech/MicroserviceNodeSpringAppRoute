@@ -33,5 +33,7 @@ Pre-requisite:
 1. Maven should be installed and Path must be set.
 2. NPM should be present(Optional)
 3. Account(Trial or Paid in SAP® Cloud Foundry)
+4. Create a Role Collection With Role Template Defined in xs-security.json
+5. Assign Role Collection to Your Userid
  
  

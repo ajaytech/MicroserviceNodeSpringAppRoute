@@ -6,24 +6,34 @@
 ![UI5CN Course](https://thinkific-import.s3.amazonaws.com/17035/Ieao7C5YQOq5YiDdQyht_scp-professional-devimage.jpg)
 
 ## Steps for Running App: 
+
 * Step 1: Git Clone:
 ```
 git clone https://github.com/ajaytech/MicroserviceNodeSpringAppRoute.git
 ```
+
 * Step 2: Go inside the folder where pom.xml file is present(in Spring Boot App)
+
 * Step 3: Execute Command to Create war file for Java Spring Boot
 ```
  mvn clean install
  ```
+ 
  * Step 4(Optional): Go inside folder approuter 
 ```
  npm install
  ```
+ 
 * Step 5: Create XSUAA Service
 ```
  cf create-service xsuaa application xsuaa -c xs-security.json
  ```
- * Step 6: Deploy App to SAP® Cloud Foundry. 
+ 
+* Step 6: Create a Role Collection With Role Template Defined in xs-security.json
+ 
+* Step 7: Assign Role Collection to Your Userid
+ 
+* Step 8: Deploy App to SAP® Cloud Foundry. 
   Go inside folder where manifest.yml file is present and run:
 ```
 cf push

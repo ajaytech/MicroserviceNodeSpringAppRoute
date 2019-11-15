@@ -8,7 +8,7 @@
 ## Steps for Running App: 
 * Step 1: Git Clone:
 ```
-git clone <URL of Repo>
+git clone https://github.com/ajaytech/MicroserviceNodeSpringAppRoute.git
 ```
 * Step 2: Go inside the folder where pom.xml file is present(in Spring Boot App)
 * Step 3: Execute Command to Create war file for Java Spring Boot

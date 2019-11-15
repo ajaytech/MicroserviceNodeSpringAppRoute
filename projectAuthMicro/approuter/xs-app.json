@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "source": "^/java",
+      "target": "/",
+      "destination": "spring_app"
+    },
+    {
+      "source": "^/node",
+      "target": "/",
+      "destination": "node_app"
+    }
+  ]
+}

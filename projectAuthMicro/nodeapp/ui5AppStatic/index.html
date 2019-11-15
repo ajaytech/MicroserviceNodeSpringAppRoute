@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script
+      src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+      id="sap-ui-bootstrap"
+      data-sap-ui-theme="sap_belize"
+      data-sap-ui-libs="sap.m"
+    ></script>
+
+    <script>
+      sap.ui.getCore().attachInit(function() {
+        var oApp = new sap.m.App();
+
+        var oList = new sap.m.List();
+
+        var oModel = new sap.ui.model.json.JSONModel("/node/Student");
+        sap.ui.getCore().setModel(oModel);
+
+        var oListTemplate = new sap.m.StandardListItem({
+          title: "{ID}",
+          description: "{FIRSTNAME}"
+        });
+
+        oList.bindItems("/", oListTemplate);
+
+        var oPage = new sap.m.Page({
+          title: "Students",
+          content: [oList]
+        });
+
+        oApp.addPage(oPage);
+        oApp.placeAt("content");
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="content"></div>
+  </body>
+</html>

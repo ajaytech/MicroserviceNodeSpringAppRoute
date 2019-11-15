@@ -1,0 +1,49 @@
+applications:
+  #Spring Java
+  - name: demoHDICRUD
+    buildpack: sap_java_buildpack
+    memory: 1024M
+    routes:
+      - route: https://demohdi-somenameajayurl.cfapps.eu10.hana.ondemand.com
+    timeout: 100
+    path: ./demoHDICRUD4/target/demoHDICRUD-0.0.1-SNAPSHOT.war
+    services:
+      - hdidemodb1
+      - xsuaa
+
+    #NodeJS
+  - name: demonode
+    buildpack: nodejs_buildpack
+    memory: 256M
+    routes:
+      - route: https://demohdinode-somenameajayurl.cfapps.eu10.hana.ondemand.com
+    timeout: 100
+    path: nodeapp
+    services:
+      - hdidemodb1
+      - xsuaa
+
+  #NodeJS Approuter
+  - name: approuter
+    buildpack: nodejs_buildpack
+    memory: 128M
+    routes:
+      - route: https://approuter-somenameajayurl.cfapps.eu10.hana.ondemand.com
+    timeout: 100
+    path: approuter
+    services:
+      - xsuaa
+    env:
+      destinations: >
+        [
+          {
+            "name": "spring_app",
+            "url": "https://demohdi-somenameajayurl.cfapps.eu10.hana.ondemand.com",
+            "forwardAuthToken": true
+          },
+          {
+            "name": "node_app",
+            "url": "https://demohdinode-somenameajayurl.cfapps.eu10.hana.ondemand.com",
+            "forwardAuthToken": true
+          }
+        ]

@@ -1,0 +1,19 @@
+{
+  "name": "nodeapp",
+  "version": "1.0.0",
+  "description": "demo Node App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ajay",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/xsenv": "^2.1.0",
+    "@sap/xssec": "^2.2.3",
+    "express": "^4.17.1",
+    "hdb": "^0.17.1",
+    "passport": "^0.4.0"
+  }
+}

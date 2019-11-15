@@ -1,0 +1,17 @@
+{
+  "xsappname": "myDemoXSApp",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.readDataAjay",
+      "description": "display"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "readRoleTemplateAjay",
+      "description": "You can read with this yay role!",
+      "scope-references": ["$XSAPPNAME.readDataAjay"]
+    }
+  ]
+}
